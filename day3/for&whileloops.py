@@ -11,3 +11,47 @@ while i < m :
     if i%3 == 0:
         continue
     print (i , end="")
+
+# #___________________________________________________________________________________________________________________#
+
+x=20
+for i in range (1,x+1):
+      if i%3==0 and i%5==0:
+            print("FizzBuzz")
+      elif  i%3==0:
+           print("Fizz")
+      elif i%5==0:
+            print("Buzz")
+      else :
+            print(i)
+
+#___________________________________________________________________________________________________________________#
+
+x=[2,4,6,8,10]
+for i in x:
+     i=i*2
+     print(i)
+
+#___________________________________________________________________________________________________________________#
+
+
+'''
+Create a function named square.
+It should take one number (as input).
+Inside, it should calculate the square of that number (number × number).
+Return the result.
+Outside the function, call it with the number 5, and print what it gives back.'''
+
+def square(x):
+    x*=x
+    print(x)
+square(5)
+'''👉 This will print 25, but result will be None, because the function didn’t return anything.'''
+
+def square(x):
+    return x*x
+print(square(5))
+
+'''⚡So:
+Use print() when you just want to show something.
+Use return when your function should produce a value that can be reused.'''
