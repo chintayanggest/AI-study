@@ -91,3 +91,47 @@ while True:
         print("Goodbye!")
         break
     print(f"You entered {x}")
+
+# ___________________________________________________________________________________________________________________#
+
+'''Make a program that:
+Has a list of numbers: [3, 7, 12, 18, 25, 30]
+Loops through the list.
+For each number:
+If it’s even, print: "X is even"
+If it’s odd, print: "X is odd"'''
+
+x=[3,7,12,18,25,30]
+for i in x:
+    if i%2==0:
+        print(f"{i} is even")
+    else:
+        print(f"{i} is odd")
+
+# ___________________________________________________________________________________________________________________#
+
+'''Make a program that:
+Asks the user to enter 5 numbers (one by one).
+Stores them in a list.
+After all numbers are entered, print the list.'''
+'''From the list you just created, print:
+The maximum number
+The minimum number
+The sum of all numbers'''
+
+x=[]
+count=0
+while count <5:
+    y = int(input("Input a number:"))
+    x.append(y)
+    count +=1
+print(x)
+# print(f"the max of the list is {max(x)}")
+# print(f"the min of the list is {min(x)}")
+sum=0
+for i in x:
+    sum+=i
+print(f"the sum is {sum}")
+x.sort()
+print(f"the min is {x[0]}")
+print(f"the min is {x[4]}")
