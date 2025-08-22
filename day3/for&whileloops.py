@@ -110,14 +110,14 @@ for i in x:
 
 # ___________________________________________________________________________________________________________________#
 
-'''Make a program that:
-Asks the user to enter 5 numbers (one by one).
-Stores them in a list.
-After all numbers are entered, print the list.'''
-'''From the list you just created, print:
-The maximum number
-The minimum number
-The sum of all numbers'''
+# '''Make a program that:
+# Asks the user to enter 5 numbers (one by one).
+# Stores them in a list.
+# After all numbers are entered, print the list.'''
+# '''From the list you just created, print:
+# The maximum number
+# The minimum number
+# The sum of all numbers'''
 
 x=[]
 count=0
@@ -126,12 +126,65 @@ while count <5:
     x.append(y)
     count +=1
 print(x)
+
+# first way 
 # print(f"the max of the list is {max(x)}")
 # print(f"the min of the list is {min(x)}")
+
 sum=0
 for i in x:
     sum+=i
 print(f"the sum is {sum}")
-x.sort()
-print(f"the min is {x[0]}")
-print(f"the min is {x[4]}")
+
+#second way
+# x.sort()
+# print(f"the min is {x[0]}")
+# print(f"the max is {x[4]}")
+
+#third way
+#use loop
+min=x[0] #this is initialize min = the first on "x" list the first number
+max=0
+for i in x:
+    if i<min:
+        min=i
+    elif i>max:
+        max=i
+print(f"the min number is {min}")
+print(f"the max number is {max}")
+
+ # ___________________________________________________________________________________________________________________#
+
+'''The better version of the above code 
+most of the code use loop to find the result and do not use min and max as variabel cause it can overwrite built in python'''
+
+x = []
+count = 0
+
+while count < 5:
+    y = int(input("Input a number: "))
+    x.append(y)
+    count += 1
+
+print(x)
+
+# Sum using loop
+total = 0
+for i in x:
+    total += i
+print(f"The sum is {total}")
+
+# Find min and max using loop
+min_num = x[0]  # initialize with the first element
+max_num = x[0]
+
+for i in x:
+    if i < min_num:
+        min_num = i
+    elif i > max_num:
+        max_num = i
+
+print(f"The min number is {min_num}")
+print(f"The max number is {max_num}")
+
+ # ___________________________________________________________________________________________________________________#
