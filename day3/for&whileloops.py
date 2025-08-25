@@ -188,3 +188,47 @@ print(f"The min number is {min_num}")
 print(f"The max number is {max_num}")
 
  # ___________________________________________________________________________________________________________________#
+
+'''
+Asks the user to input 5 numbers (store them in a list).
+Counts how many numbers are even and how many are odd.
+Prints the counts at the end.'''
+
+x=[]
+odd_num_count = 0
+even_num_count = 0
+count = 0
+while count < 5 :
+    y = int(input(f"Input a number :"))
+    count +=1
+    x.append(y) 
+print(x)
+for i in x:
+    if i%2 == 0:
+        even_num_count +=1 
+    else :
+        odd_num_count +=1
+print(f"Total even number is {even_num_count}")
+print(f"Total odd number is {odd_num_count}")
+
+
+'''used a for loop instead of while for cleaner iteration.
+Variable names slightly simplified (even_count instead of even_num_count).
+Printed the numbers list in a neat way.'''
+numbers = []  
+even_count = 0  
+odd_count = 0  
+
+for i in range(5):  
+    num = int(input("Input a number: "))  
+    numbers.append(num)  
+
+for num in numbers:  
+    if num % 2 == 0:  
+        even_count += 1  
+    else:  
+        odd_count += 1  
+
+print(f"Numbers: {numbers}")  
+print(f"Total even numbers: {even_count}")  
+print(f"Total odd numbers: {odd_count}")  
