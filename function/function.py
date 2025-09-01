@@ -146,3 +146,68 @@ classify_numbers(numbers)
 
 
  # ___________________________________________________________________________________________________________________#
+
+'''
+Write a program that:
+Asks the user to enter a sentence.
+Counting rules:
+Ignore case (treat A same as a).
+Count only alphabetic characters for vowels (ignore digits/punctuation).
+Split words by whitespace for the per_word list.
+The main program should call analyze_sentence, then print the returned results in a readable format (you decide layout).
+Rules:
+Use dictionaries and lists (no collections.Counter).
+The function must return the dictionary (dont just print inside the function).
+Handle ties for most frequent vowels by returning all tied vowels in the most_frequent_vowels list.'''
+
+sentence = input("Enter a sentence : ")
+sentence = sentence.lower()
+vowels_dict={"a": 0 , "i": 0 , "u":0,"e": 0, "o":0}
+
+
+def analyze_sentence(vowels_dict):
+  for y in sentence.lower():
+    if y in vowels_dict:
+      vowels_dict[y] += 1
+  return vowels_dict
+
+
+word = sentence.split(' ')
+print(word)
+
+
+print(f"{analyze_sentence(vowels_dict)}")
+
+ # ___________________________________________________________________________________________________________________#
+
+'''Write a Python function called greet that takes a single argument, name (a string), and prints a personalized greeting to the console.'''
+
+def greet (x):
+    print(f"Hello, {x}")
+
+greet("Alice")
+
+
+# ___________________________________________________________________________________________________________________#
+'''Write a Python function called sum_even_numbers that takes a list of integers as an argument and returns the sum of all the even numbers in that list.'''
+
+
+def sum_even_numbers(numbers):
+    count = 0
+    for i in numbers:
+        if i % 2 == 0:
+            count +=i
+    return count       
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+total = sum_even_numbers(numbers)
+print(f"The sum is {total}")
+
+#a more compact "Pythonic" way to write this uses a list comprehension:
+def sum_even_numbers_pythonic(numbers):
+    return sum([num for num in numbers if num % 2 == 0])
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+print(f"The sum is {sum_even_numbers_pythonic(numbers)}")
+
+def invert_dictionary(my_dict):
