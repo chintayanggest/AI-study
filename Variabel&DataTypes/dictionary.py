@@ -58,8 +58,3 @@ print(f"The sentence : '{x}'")
 print(f"The total vowel count : {count}")
 print(f"The most frequent vowel is : '{highest_key}' appears {highest_value} times")
 print(f"The vowels from most frequent to least frequent {sorted_items_dsc}")
-
-
-
-
- # ___________________________________________________________________________________________________________________#
